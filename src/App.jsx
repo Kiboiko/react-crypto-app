@@ -1,8 +1,5 @@
-import { DatePicker } from "antd";
-import { Layout } from "antd";
-import AppHeader from "./Components/Layout/AppHeader";
-import AppSider from "./Components/Layout/AppSider";
-import AppContent from "./Components/Layout/AppContent";
+import AppLayout from "./Components/Layout/AppLayout";
+import { CryptoContextProvider } from "./Context/crypto-context";
 
 const footerStyle = {
   textAlign: "center",
@@ -17,12 +14,8 @@ const layoutStyle = {
 };
 export default function App() {
   return (
-    <Layout>
-      <AppHeader />
-      <Layout>
-        <AppSider />
-        <AppContent />
-      </Layout>
-    </Layout>
+    <CryptoContextProvider>
+      <AppLayout />
+    </CryptoContextProvider>
   );
 }
