@@ -66,7 +66,7 @@ export default function AppHeader() {
         Add Asset
       </Button>
 
-      <Modal open={modal} onOk={() => setModal(false)}>
+      <Modal open={modal} onCancel={() => setModal(false)} footer={null}>
         <CoinInfoModal coin={coin} />
       </Modal>
 
