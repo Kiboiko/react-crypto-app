@@ -24,6 +24,7 @@ export default function AppSider() {
 
   return (
     <Layout.Sider width="25%" style={siderStyle}>
+      {console.log(assets)}
       {assets.map((asset) => {
         return (
           <Card key={asset.id} style={{ marginBottom: "1rem" }}>
